@@ -31,11 +31,7 @@ registerBlockType("crensoft/home", {
 	title: __("Crensoft Home"), // Block title.
 	icon: "shield", // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: "common", // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
-	keywords: [
-		__("crensoft — CGB Block"),
-		__("CGB Example"),
-		__("create-guten-block")
-	],
+	keywords: [__("crensoft — CGB Block")],
 
 	/**
 	 * The edit function describes the structure of your block in the context of the editor.
