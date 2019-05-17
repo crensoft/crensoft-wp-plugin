@@ -43,7 +43,7 @@ registerBlockType("crensoft/home", {
 	 */
 	edit: function(props: any) {
 		// Creates a <p class='wp-block-cgb-block-crensoft'></p>
-		//
+		// test
 		return (
 			<Theme>
 				<Crensoft />
