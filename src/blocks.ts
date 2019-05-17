@@ -9,3 +9,4 @@
  * Webpack is compiling as the input file.
  */
 import "./block/block";
+import "./blocks/Crensoft/Crensoft";
