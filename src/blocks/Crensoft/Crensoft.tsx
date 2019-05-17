@@ -7,6 +7,7 @@
 
 //  Import CSS.
 import Crensoft from "@crensoft/mui-marketing/lib/Crensoft/Crensoft";
+import Theme from "@crensoft/mui-core/lib/components/Theme/Theme";
 declare var wp: any;
 
 const { __ } = wp.i18n; // Import __() from wp.i18n
@@ -46,7 +47,11 @@ registerBlockType("crensoft/home", {
 	 */
 	edit: function(props: any) {
 		// Creates a <p class='wp-block-cgb-block-crensoft'></p>.
-		return <Crensoft />;
+		return (
+			<Theme>
+				<Crensoft />
+			</Theme>
+		);
 	},
 
 	/**
@@ -58,6 +63,10 @@ registerBlockType("crensoft/home", {
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
 	save: function(props: any) {
-		return <Crensoft />;
+		return (
+			<Theme>
+				<Crensoft />
+			</Theme>
+		);
 	}
 });
