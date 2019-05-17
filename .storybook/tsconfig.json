@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist/",
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"module": "esnext",
+		"target": "es5",
+		"jsx": "react",
+		"allowSyntheticDefaultImports": true,
+		"moduleResolution": "node",
+		"isolatedModules": false,
+		"strict": true,
+		"declaration": true,
+		"lib": ["es2017", "dom"]
+		// "rootDirs": ["../src", "../stories"]
+	},
+	"include": ["*.tsx", "*.d.ts"],
+	"exclude": ["node_modules", "dist", "config", "scripts"],
+	"filesGlob": ["./src/**/*.d.ts"],
+	"awesomeTypescriptLoaderOptions": {
+		"useCache": true
+	}
+}
