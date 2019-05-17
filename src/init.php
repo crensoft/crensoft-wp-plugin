@@ -73,6 +73,8 @@ function crensoft_cgb_block_assets() { // phpcs:ignore
 			'editor_style'  => 'crensoft-cgb-block-editor-css',
 		)
 	);
+
+	register_block_type('crensoft/crensoft-home');
 }
 
 // Hook: Block assets.
