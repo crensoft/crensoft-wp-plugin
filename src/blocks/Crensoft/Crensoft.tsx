@@ -46,7 +46,7 @@ registerBlockType("crensoft/home", {
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
 	edit: function(props: any) {
-		// Creates a <p class='wp-block-cgb-block-crensoft'></p>.
+		// Creates a <p class='wp-block-cgb-block-crensoft'></p>
 		return (
 			<Theme>
 				<Crensoft />
