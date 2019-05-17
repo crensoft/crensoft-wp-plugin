@@ -11,8 +11,8 @@
 		"moduleResolution": "node",
 		"isolatedModules": false,
 		"strict": true,
-		"rootDirs": ["src"],
-		"declaration": true
+		"rootDirs": ["src"]
+		// "declaration": true
 		// "baseUrl": "./src",
 		// "paths": {
 		// 	"@pixor/*": ["packages/*"]
