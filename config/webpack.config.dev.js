@@ -93,19 +93,19 @@ module.exports = {
 
 			// All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
 			{ enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
-			// {
-			// 	test: /\.(js|jsx|mjs)$/,
-			// 	exclude: /(node_modules|bower_components)/,
-			// 	use: {
-			// 		loader: "babel-loader",
-			// 		options: {
-			// 			// This is a feature of `babel-loader` for webpack (not Babel itself).
-			// 			// It enables caching results in ./node_modules/.cache/babel-loader/
-			// 			// directory for faster rebuilds.
-			// 			cacheDirectory: true
-			// 		}
-			// 	}
-			// },
+			{
+				test: /\.(js|jsx|mjs)$/,
+				exclude: /(node_modules|bower_components)/,
+				use: {
+					loader: "babel-loader",
+					options: {
+						// This is a feature of `babel-loader` for webpack (not Babel itself).
+						// It enables caching results in ./node_modules/.cache/babel-loader/
+						// directory for faster rebuilds.
+						cacheDirectory: true
+					}
+				}
+			},
 			{
 				test: /style\.s?css$/,
 				exclude: /(node_modules|bower_components)/,

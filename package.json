@@ -90,6 +90,12 @@
 				{
 					"useBuiltIns": true
 				}
+			],
+			[
+				"transform-react-jsx",
+				{
+					"pragma": "wp.element.createElement"
+				}
 			]
 		]
 	},
