@@ -86,5 +86,18 @@ function crensoft_cgb_block_assets() { // phpcs:ignore
 	);
 }
 
-// Hook: Block assets.
+/** Add client side hydration script: Returns dynamic functionality to components i.e. event listeners */
+function crensoft_hydrate_client_js() {
+	wp_enqueue_script( 'hydrate-js', plugins_url( 'dist/hydrate.js', dirname( __FILE__ ) ), array('wp-element', 'jquery'), '1.0', true );
+}
+
+function crensoft_register_styles_meta() {
+	register_meta( 'post', 'styles', array(
+			'show_in_rest' => true,
+			'single' => true
+	) );
+}
+
 add_action( 'init', 'crensoft_cgb_block_assets' );
+add_action( 'init', 'crensoft_register_styles_meta' );
+add_action( 'init', 'crensoft_hydrate_client_js' );

@@ -9,15 +9,9 @@
 		"jsxFactory": "wp.element.createElement",
 		"allowSyntheticDefaultImports": true,
 		"moduleResolution": "node",
-		"isolatedModules": false,
+		"isolatedModules": true,
 		"strict": true,
 		"rootDirs": ["src"]
-		// "declaration": true
-		// "baseUrl": "./src",
-		// "paths": {
-		// 	"@pixor/*": ["packages/*"]
-		// 	// "packages/*": ["packages/*"]
-		// }
 	},
 	"include": ["./src/**/*"],
 	"filesGlob": ["./src/**/*.d.ts"],

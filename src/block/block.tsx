@@ -8,7 +8,6 @@
 //  Import CSS.
 import "./style.scss";
 import "./editor.scss";
-import { Button } from "@material-ui/core";
 declare var wp: any;
 
 const { __ } = wp.i18n; // Import __() from wp.i18n
@@ -54,9 +53,7 @@ registerBlockType("cgb/block-crensoft", {
 				<p>
 					CGB BLOCK: <code>crensoft</code> is a new Gutenberg block
 				</p>
-				<p>
-					<Button>my button</Button>.
-				</p>
+				<p />
 			</div>
 		);
 	},
@@ -76,9 +73,7 @@ registerBlockType("cgb/block-crensoft", {
 				<p>
 					CGB BLOCK: <code>crensoft</code> is a new Gutenberg block.
 				</p>
-				<p>
-					<Button>my button</Button>
-				</p>
+				<p />
 			</div>
 		);
 	}
