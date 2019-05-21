@@ -1,22 +1,23 @@
 {
-	"compilerOptions": {
-		"outDir": "./dist/",
-		"sourceMap": true,
-		"noImplicitAny": true,
-		"module": "esnext",
-		"target": "es6",
-		"jsx": "react",
-		"jsxFactory": "wp.element.createElement",
-		"allowSyntheticDefaultImports": true,
-		"moduleResolution": "node",
-		"isolatedModules": true,
-		"strict": true,
-		"rootDirs": ["src"]
-	},
-	"include": ["./src/**/*"],
-	"filesGlob": ["./src/**/*.d.ts"],
-	"exclude": ["node_modules", "dist", "config", "scripts"],
-	"awesomeTypescriptLoaderOptions": {
-		"useCache": true
-	}
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es6",
+    "jsx": "react",
+    "jsxFactory": "wp.element.createElement",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "strict": true,
+    "rootDirs": ["src"]
+  },
+  "include": ["./src/**/*"],
+  "filesGlob": ["./src/**/*.d.ts"],
+  "exclude": ["node_modules", "dist", "config", "scripts"],
+  "awesomeTypescriptLoaderOptions": {
+    "useCache": true,
+    "reportFiles": ["src/**/*.{ts,tsx}"]
+  }
 }

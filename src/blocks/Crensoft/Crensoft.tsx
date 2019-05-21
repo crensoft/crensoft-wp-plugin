@@ -16,7 +16,7 @@ declare var wp: any;
 const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
 const { BlockControls } = wp.editor;
-const { IconButton } = wp.components;
+// const { IconButton } = wp.components;
 
 /**
  * Register: aa Gutenberg Block.
@@ -32,79 +32,70 @@ const { IconButton } = wp.components;
  *                             registered; otherwise `undefined`.
  */
 registerBlockType("crensoft/home", {
-	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __("Crensoft Home"), // Block title.
-	icon: "shield", // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
-	category: "common", // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
-	keywords: [__("crensoft — CGB Block")],
+  // Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
+  title: __("Crensoft Home"), // Block title.
+  icon: "shield", // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
+  category: "common", // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
+  keywords: [__("crensoft — CGB Block")],
 
-	attributes: {
-		styles: {
-			type: "string",
-			source: "meta",
-			meta: "styles"
-		}
-	},
+  attributes: {
+    styles: {
+      type: "string",
+      source: "meta",
+      meta: "styles"
+    }
+  },
 
-	/**
-	 * The edit function describes the structure of your block in the context of the editor.
-	 * This represents what the editor will render when the block is used.
-	 *
-	 * The "edit" property must be a valid function.
-	 *
-	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
-	 */
-	edit: function(props: any) {
-		// Creates a <p class='wp-block-cgb-block-crensoft'></p>
-		// some test 12
+  /**
+   * The edit function describes the structure of your block in the context of the editor.
+   * This represents what the editor will render when the block is used.
+   *
+   * The "edit" property must be a valid function.
+   *
+   * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
+   */
+  edit: function(props: any) {
+    // Creates a <p class='wp-block-cgb-block-crensoft'></p>
+    wp.element.useEffect(() => {
+      props.setAttributes({ styles: "component" });
+    }, []);
+    return [
+      <BlockControls key="ctrl">
+        {/* <IconButton onClick={updateCss} icon="admin-appearance" /> */}
+      </BlockControls>,
+      <Theme key="content">
+        <Crensoft logo="%wp:logo" />
+      </Theme>
+    ];
+  },
 
-		// props.setAttributes({ styles: css });
-		const updateCss = () => {
-			const sheets = new ServerStyleSheets();
-			ReactDOM.renderToString(
-				sheets.collect(
-					<Theme>
-						<Crensoft />
-					</Theme>
-				)
-			);
-			const css = sheets.toString();
-			props.setAttributes({ styles: css });
-		};
-		return [
-			<BlockControls key="ctrl">
-				<IconButton onClick={updateCss} icon="admin-appearance" />
-			</BlockControls>,
-			<Theme key="content">
-				<Crensoft />
-			</Theme>
-		];
-	},
-
-	/**
-	 * The save function defines the way in which the different attributes should be combined
-	 * into the final markup, which is then serialized by Gutenberg into post_content.
-	 *
-	 * The "save" property must be specified and must be a valid function.
-	 *
-	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
-	 */
-	save: function(props: any, b: any) {
-		console.log(props);
-		// props.setAttributes({ styles: css });
-		const html = ReactDOM.renderToString(
-			<Theme>
-				<Crensoft />
-			</Theme>
-		);
-		return (
-			<div
-				className="wp-block-crensoft-home"
-				// data-props={JSON.stringify(props)}
-				dangerouslySetInnerHTML={{
-					__html: html
-				}}
-			/>
-		);
-	}
+  /**
+   * The save function defines the way in which the different attributes should be combined
+   * into the final markup, which is then serialized by Gutenberg into post_content.
+   *
+   * The "save" property must be specified and must be a valid function.
+   *
+   * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
+   */
+  save: function(props: any) {
+    const sheets = new ServerStyleSheets();
+    const html = ReactDOM.renderToString(
+      sheets.collect(
+        <Theme>
+          <Crensoft logo="%wp:logo%" />
+        </Theme>
+      )
+    );
+    const css = sheets.toString();
+    return (
+      <div
+        className="wp-block-crensoft-home"
+        data-props={JSON.stringify({ logo: "%wp:logo%" })}
+        data-css={css}
+        dangerouslySetInnerHTML={{
+          __html: html
+        }}
+      />
+    );
+  }
 });

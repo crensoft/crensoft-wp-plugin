@@ -911,7 +911,7 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@crensoft/mui-core@file:../mui/packages/core":
+"@crensoft/mui-core@file:./packages/mui/packages/mui-core":
   version "0.1.0"
   dependencies:
     "@crensoft/mui-utils" "^0.1.0"
@@ -927,7 +927,7 @@
     ramda "^0.26.1"
     rxjs "^6.5.2"
 
-"@crensoft/mui-marketing@file:../mui/packages/marketing":
+"@crensoft/mui-marketing@file:./packages/mui/packages/mui-marketing":
   version "0.1.0"
   dependencies:
     "@crensoft/mui-utils" "^0.1.0"
