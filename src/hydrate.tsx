@@ -1,4 +1,4 @@
-import Crensoft from "@crensoft/mui-marketing/lib/Crensoft/Crensoft";
+import Crensoft from "@crensoft/mui-marketing/lib/components/Crensoft/Crensoft";
 import { hydrate } from "react-dom";
 import Theme from "@crensoft/mui-core/lib/components/Theme/Theme";
 
@@ -12,7 +12,6 @@ const removeServerStyles = () => {
 const myComponents = {
   "crensoft-home": Crensoft
 };
-// ....
 
 (function block($, components: any) {
   if (document.getElementsByClassName("wp-admin").length) {

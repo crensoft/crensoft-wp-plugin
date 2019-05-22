@@ -6,7 +6,7 @@
  */
 
 //  Import CSS.
-import Crensoft from "@crensoft/mui-marketing/lib/Crensoft/Crensoft";
+import Crensoft from "@crensoft/mui-marketing/lib/components/Crensoft/Crensoft";
 import ReactDOM from "react-dom/server";
 import { ServerStyleSheets } from "@material-ui/styles";
 import Theme from "@crensoft/mui-core/lib/components/Theme/Theme";
@@ -60,9 +60,7 @@ registerBlockType("crensoft/home", {
       props.setAttributes({ styles: "component" });
     }, []);
     return [
-      <BlockControls key="ctrl">
-        {/* <IconButton onClick={updateCss} icon="admin-appearance" /> */}
-      </BlockControls>,
+      <BlockControls key="ctrl" />,
       <Theme key="content">
         <Crensoft logo="%wp:logo" />
       </Theme>
