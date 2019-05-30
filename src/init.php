@@ -74,16 +74,9 @@ function crensoft_cgb_block_assets() { // phpcs:ignore
 		)
 	);
 
-	register_block_type('crensoft/crensoft-home'//,
-		// array(
-		// 	// Enqueue blocks.style.build.css on both frontend & backend.
-		// 	'style'         => 'crensoft-cgb-style-css',
-		// 	// Enqueue blocks.build.js in the editor only.
-		// 	'editor_script' => 'crensoft-cgb-block-js',
-		// 	// Enqueue blocks.editor.build.css in the editor only.
-		// 	'editor_style'  => 'crensoft-cgb-block-editor-css',
-		// )
-	);
+	// register_block_type('crensoft/crensoft-home');
+	// register_block_type('crensoft/crensoft-contact');
+	// register_block_type('crensoft/crensoft-terms');
 }
 
 /** Add client side hydration script: Returns dynamic functionality to components i.e. event listeners */

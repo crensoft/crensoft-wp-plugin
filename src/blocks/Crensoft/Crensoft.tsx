@@ -6,10 +6,9 @@
  */
 
 //  Import CSS.
-import Crensoft from "@crensoft/mui-marketing/lib/components/Crensoft/Crensoft";
 import ReactDOM from "react-dom/server";
 import { ServerStyleSheets } from "@material-ui/styles";
-import Theme from "@crensoft/mui-core/lib/components/Theme/Theme";
+import Crensoft from "../../components/Crensoft/Crensoft";
 
 declare var wp: any;
 
@@ -59,12 +58,7 @@ registerBlockType("crensoft/home", {
     wp.element.useEffect(() => {
       props.setAttributes({ styles: "component" });
     }, []);
-    return [
-      <BlockControls key="ctrl" />,
-      <Theme key="content">
-        <Crensoft logo="%wp:logo" />
-      </Theme>
-    ];
+    return [<BlockControls key="ctrl" />, <Crensoft key="crensoft" logo="%wp:logo" />];
   },
 
   /**
@@ -77,13 +71,7 @@ registerBlockType("crensoft/home", {
    */
   save: function(props: any) {
     const sheets = new ServerStyleSheets();
-    const html = ReactDOM.renderToString(
-      sheets.collect(
-        <Theme>
-          <Crensoft logo="%wp:logo%" />
-        </Theme>
-      )
-    );
+    const html = ReactDOM.renderToString(sheets.collect(<Crensoft logo="%wp:logo%" />));
     const css = sheets.toString();
     return (
       <div

@@ -10,3 +10,6 @@
  */
 import "./block/block";
 import "./blocks/Crensoft/Crensoft";
+import "./blocks/ContactPage/ContactPage";
+import "./blocks/Legal/TermsPage";
+import "./blocks/Legal/PrivacyPage";

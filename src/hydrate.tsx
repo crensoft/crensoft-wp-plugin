@@ -1,6 +1,8 @@
-import Crensoft from "@crensoft/mui-marketing/lib/components/Crensoft/Crensoft";
 import { hydrate } from "react-dom";
-import Theme from "@crensoft/mui-core/lib/components/Theme/Theme";
+import Crensoft from "./components/Crensoft/Crensoft";
+import ContactPage from "./components/Crensoft/ContactPage";
+import TermsPage from "./components/Crensoft/TermsPage";
+import PrivacyPage from "./components/Crensoft/PrivacyPage";
 
 const removeServerStyles = () => {
   const ssStyles = document.getElementById("server-side-styles");
@@ -10,7 +12,10 @@ const removeServerStyles = () => {
 };
 
 const myComponents = {
-  "crensoft-home": Crensoft
+  "crensoft-home": Crensoft,
+  "crensoft-contact": ContactPage,
+  "crensoft-terms": TermsPage,
+  "crensoft-privacy": PrivacyPage
 };
 
 (function block($, components: any) {
@@ -24,15 +29,9 @@ const myComponents = {
       const props = $(ele).data("props") || {};
       // clean props
       $(ele).data("props", "");
-      hydrate(
-        <Theme>
-          <Component {...props} />
-        </Theme>,
-        ele,
-        () => {
-          removeServerStyles();
-        }
-      );
+      hydrate(<Component {...props} />, ele, () => {
+        removeServerStyles();
+      });
     });
   }
   // @ts-ignore
