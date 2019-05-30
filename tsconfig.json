@@ -15,7 +15,7 @@
   },
   "include": ["./src/**/*"],
   "filesGlob": ["./src/**/*.d.ts"],
-  "exclude": ["node_modules", "dist", "config", "scripts"],
+  "exclude": ["node_modules", "dist", "config", "scripts", "components"],
   "awesomeTypescriptLoaderOptions": {
     "useCache": true,
     "reportFiles": ["src/**/*.{ts,tsx}"]
