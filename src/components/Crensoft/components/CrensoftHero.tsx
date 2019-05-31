@@ -14,7 +14,7 @@ const hero = {
   actions: [
     {
       content: "Get started",
-      url: "#contact",
+      to: "/contact",
       prominent: true,
       cta: true,
       large: true

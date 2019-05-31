@@ -21,6 +21,7 @@ const menus = [
       key: "contact",
       title: "contact us",
       btn: {
+        to: "/contact",
         cta: true,
         prominent: true
       }

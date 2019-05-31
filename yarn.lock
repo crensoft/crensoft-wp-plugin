@@ -931,25 +931,7 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@crensoft/mui-core@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@crensoft/mui-core/-/mui-core-0.1.0.tgz#46434bf68eb4e0ed25eb3dc82a0b5026747398fb"
-  integrity sha512-VWB5dqP28/InnD7oIQ7hEpAKYboRSe5PgczFuSmqAzcEBchO9MK1SAByjGnN+Xp+a/VRwoLnh2W8W7IRMXE+YA==
-  dependencies:
-    "@crensoft/mui-utils" "^0.1.0"
-    "@crensoft/test-utils" "^0.1.0"
-    "@fortawesome/fontawesome-svg-core" "^1.2.18"
-    "@fortawesome/free-brands-svg-icons" "^5.8.2"
-    "@fortawesome/free-regular-svg-icons" "^5.8.2"
-    "@fortawesome/free-solid-svg-icons" "^5.8.2"
-    "@fortawesome/react-fontawesome" "^0.1.4"
-    "@material-ui/core" "^4.0.0-beta.1"
-    "@types/react" "^16.8.17"
-    color "^3.1.1"
-    ramda "^0.26.1"
-    rxjs "^6.5.2"
-
-"@crensoft/mui-core@file:../../../mui/packages/mui-core":
+"@crensoft/mui-core@^0.1.0", "@crensoft/mui-core@file:../../../mui/packages/mui-core":
   version "0.1.0"
   dependencies:
     "@crensoft/mui-utils" "^0.1.0"
@@ -1191,16 +1173,16 @@
   resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
   integrity sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
 
-"@material-ui/core@^4.0.0-beta.1", "@material-ui/core@^4.0.0-beta.2", "@material-ui/core@^4.0.0-rc.0":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.0.1.tgz#7fe3bcb1a89b01376b181358a5ded58291da0016"
-  integrity sha512-cw2Qs3BLem8FOrp/knfjJkwJXG4dZO/HGyWwZV71UWiqDIOF3plHZ7duCbOMIWwKgSUJ85k9omlSHUTT63E/pw==
+"@material-ui/core@^4.0.0-rc.0":
+  version "4.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.0.0-rc.0.tgz#313ba18cdf4baeaa6c2efb1e38a88ac5b064dce4"
+  integrity sha512-DRaCGcXd+aQs98lLvmVBAAFxqsB6UEdGw5GLBTZlKKCpAXF2UuwWxqXfJiBIJXkT0aX9rMq9EgUfaq5vRIW+iA==
   dependencies:
     "@babel/runtime" "^7.2.0"
-    "@material-ui/styles" "^4.0.1"
-    "@material-ui/system" "^4.0.1"
-    "@material-ui/types" "^4.0.1"
-    "@material-ui/utils" "^4.0.1"
+    "@material-ui/styles" "^4.0.0-rc.0"
+    "@material-ui/system" "^4.0.0-rc.0"
+    "@material-ui/types" "^4.0.0-rc.0"
+    "@material-ui/utils" "^4.0.0-rc.0"
     "@types/react-transition-group" "^2.0.16"
     clsx "^1.0.2"
     convert-css-length "^1.0.2"
@@ -1216,7 +1198,30 @@
     react-transition-group "^4.0.0"
     warning "^4.0.1"
 
-"@material-ui/styles@^4.0.0-beta.2", "@material-ui/styles@^4.0.1":
+"@material-ui/styles@^4.0.0-rc.0":
+  version "4.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.0.0-rc.0.tgz#c805bdd2439bee0259a2b2d24fc7fc4fce4a1cd3"
+  integrity sha512-TUb0j9gIZDPoIzEr4TEOVCWo3EeDW4J61B3CR2VVgXiaLneU/l0wzRg1KzalVBjw6Bq/97D+wPBTL+uE4wD3xg==
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+    "@emotion/hash" "^0.7.1"
+    "@material-ui/types" "^4.0.0-rc.0"
+    "@material-ui/utils" "^4.0.0-rc.0"
+    clsx "^1.0.2"
+    deepmerge "^3.0.0"
+    hoist-non-react-statics "^3.2.1"
+    jss "^10.0.0-alpha.16"
+    jss-plugin-camel-case "^10.0.0-alpha.16"
+    jss-plugin-default-unit "^10.0.0-alpha.16"
+    jss-plugin-global "^10.0.0-alpha.16"
+    jss-plugin-nested "^10.0.0-alpha.16"
+    jss-plugin-props-sort "^10.0.0-alpha.16"
+    jss-plugin-rule-value-function "^10.0.0-alpha.16"
+    jss-plugin-vendor-prefixer "^10.0.0-alpha.16"
+    prop-types "^15.7.2"
+    warning "^4.0.1"
+
+"@material-ui/styles@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.0.1.tgz#67e880d490f010c9f2956c572b07d218bfa255d7"
   integrity sha512-SywkWzBzXvm9dUY2rtmzTc/FTlKGctVYGb8hzPZyHU3OI4X9jQH4YnR/OiqTwg4jNpFnASJX5rW1rEUJM+ZnhA==
@@ -1239,7 +1244,7 @@
     prop-types "^15.7.2"
     warning "^4.0.1"
 
-"@material-ui/system@^4.0.1":
+"@material-ui/system@^4.0.0-rc.0", "@material-ui/system@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@material-ui/system/-/system-4.0.1.tgz#d78969f3dd9eb6baf82ded0ef183368d8befb00b"
   integrity sha512-NlMF4jZk1xx7taUOT+QhrJw7v7uUi9Ae+G8C8fowGgP5x04whxOuSuSmN9a8u2j7dc8XqahR0OJeA6Xch8ymog==
@@ -1249,12 +1254,12 @@
     prop-types "^15.7.2"
     warning "^4.0.1"
 
-"@material-ui/types@^4.0.1":
+"@material-ui/types@^4.0.0-rc.0", "@material-ui/types@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@material-ui/types/-/types-4.0.1.tgz#a05fe801a10604d99e593303df9e843868008d4f"
   integrity sha512-FGhogU9l4s+ycMcC3hhOAvu5hcWa5TVSCCGUf4NOUF904ythroWSAvcCHn92NjftXZ8WZqmtPjL1K/d90Pq/3Q==
 
-"@material-ui/utils@^4.0.1":
+"@material-ui/utils@^4.0.0-rc.0", "@material-ui/utils@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@material-ui/utils/-/utils-4.0.1.tgz#ea3ab6fe4eea9588713813cff6eca33bda3519f6"
   integrity sha512-mWRcMQIrqsXGze73tx3hNfB1NUu+BL/oIQI7TImyuhsia1EQXw3bPVBjgwTzqM6MqfXw6eh1fR45Di+WN5hASA==
@@ -1725,10 +1730,10 @@
     "@svgr/plugin-svgo" "^4.2.0"
     loader-utils "^1.2.3"
 
-"@tanem/svg-injector@^8.0.6":
-  version "8.0.6"
-  resolved "https://registry.yarnpkg.com/@tanem/svg-injector/-/svg-injector-8.0.6.tgz#f0dcdb676bbd8363d43e9db3a6d493cbed251310"
-  integrity sha512-mcRQuZzm4QpCtFpjkGGZKzxd5epaM6u6NnW7GAyq8e8RFAjYblh+P29Ejnl2FoiMfsmqJ9jT3qjD4rCzCYsKMQ==
+"@tanem/svg-injector@^8.0.8":
+  version "8.0.8"
+  resolved "https://registry.yarnpkg.com/@tanem/svg-injector/-/svg-injector-8.0.8.tgz#caa36528354c04e4d76299912625358914c77e1f"
+  integrity sha512-LcAk3cWA7oeomEBXTZHnqs/RhSuDcXg+S9eKjo2C4iQ/bqa4mlg6/JqF/LqKvqraaNZSZcLKSlWzJDZ4Kslrkg==
   dependencies:
     "@babel/runtime" "^7.4.5"
 
@@ -8836,12 +8841,12 @@ react-svg-loader@^3.0.1:
     react-svg-core "^3.0.1"
 
 react-svg@^10.0.2:
-  version "10.0.4"
-  resolved "https://registry.yarnpkg.com/react-svg/-/react-svg-10.0.4.tgz#41f12e951f047d65a98ce9dfa0df4d06be34e60f"
-  integrity sha512-ZKY2NNAdm3C0nS/8TjVHVXULPyCBfYZ1weIdWFvRdFyIODuO6kAq8PMxPR5KuO6b9+YT3Jed5wVs9QkJTSOx0A==
+  version "10.0.5"
+  resolved "https://registry.yarnpkg.com/react-svg/-/react-svg-10.0.5.tgz#4b244926b0395638b7d725c89e32ac19b8928a0a"
+  integrity sha512-eUHTUZXOlPxdzVM2jk+1YUHfJoj6voh7jN70uBShAIKqUjco38fwKrkmBDnUu3GkBNBR3J6+tnCA8TGdunlnTA==
   dependencies:
     "@babel/runtime" "^7.4.5"
-    "@tanem/svg-injector" "^8.0.6"
+    "@tanem/svg-injector" "^8.0.8"
     prop-types "^15.7.2"
 
 react-syntax-highlighter@^8.0.1:
@@ -8881,9 +8886,9 @@ react-transition-group@^2.2.1:
     react-lifecycles-compat "^3.0.4"
 
 react-transition-group@^4.0.0:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.0.1.tgz#8cb8d58763e259da465385bb83b3b41b3ecba629"
-  integrity sha512-SsLcBYhO4afXJC9esL8XMxi/y0ZvEc7To0TvtrBELqzpjXQHPZOTxvuPh2/4EhYc0uSMfp2SExIxsyJ0pBdNzg==
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.1.0.tgz#7b50c0a93a6c127336187252c3c1a70eff3304ce"
+  integrity sha512-/OITbogb3emGN49WaP7468QGSde7er5w6eIHldIDCSQBq/9QTSCzs8OgpgmOnaUXCXzBUcK1zoZ6DqRlM8CJtA==
   dependencies:
     dom-helpers "^3.4.0"
     loose-envify "^1.4.0"
