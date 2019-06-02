@@ -1,5 +1,5 @@
 import React from "react";
-import { createStyles, Theme, Content, Container } from "@crensoft/mui-core";
+import { createStyles, Theme } from "@crensoft/mui-core";
 import { theme } from "./config";
 import CrensoftTopbar from "./components/CrensoftTopbar";
 import Footer from "./components/Footer";

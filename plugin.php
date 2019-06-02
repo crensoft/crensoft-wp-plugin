@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: crensoft — CGB Gutenberg Block Plugin
- * Plugin URI: https://github.com/ahmadawais/create-guten-block/
+ * Plugin Name: Crensoft Plugin
+ * Plugin URI: https://github.com/crensoft/crensoft-wp-plugin/
  * Description: crensoft — is a Gutenberg plugin created via create-guten-block.
- * Author: mrahmadawais, maedahbatool
- * Author URI: https://AhmadAwais.com/
+ * Author: Crensoft
+ * Author URI: https://crensoft.com/
  * Version: 1.0.0
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt

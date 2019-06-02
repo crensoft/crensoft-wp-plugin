@@ -9,7 +9,7 @@
  * Webpack is compiling as the input file.
  */
 import "./block/block";
-import "./blocks/Crensoft/Crensoft";
-import "./blocks/ContactPage/ContactPage";
-import "./blocks/Legal/TermsPage";
-import "./blocks/Legal/PrivacyPage";
+import "./blocks/Crensoft/Crensoft.block";
+import "./blocks/ContactPage/ContactPage.block";
+import "./blocks/Legal/PrivacyPage.block";
+import "./blocks/Legal/TermsPage.block";

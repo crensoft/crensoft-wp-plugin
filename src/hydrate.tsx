@@ -10,7 +10,6 @@ const removeServerStyles = () => {
     ssStyles.parentNode.removeChild(ssStyles);
   }
 };
-
 const myComponents = {
   "crensoft-home": Crensoft,
   "crensoft-contact": ContactPage,

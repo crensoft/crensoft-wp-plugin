@@ -40,7 +40,8 @@ const editBlocksCSSPlugin = new MiniCssExtractPlugin({
 const extractConfig = {
   use: [
     // "postcss" loader applies autoprefixer to our CSS.
-    { loader: "raw-loader" },
+    { loader: MiniCssExtractPlugin.loader },
+    { loader: "css-loader" },
     {
       loader: "postcss-loader",
       options: {
@@ -86,7 +87,7 @@ module.exports = {
   // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
   devtool: "cheap-eval-source-map",
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"],
+    extensions: [".ts", ".tsx", ".js", ".json", ".css", ".scss", ".sass"],
     plugins: [new TsConfigPathsPlugin(/* { tsconfig, compiler } */)]
   },
   module: {
