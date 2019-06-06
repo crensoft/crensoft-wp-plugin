@@ -87,16 +87,26 @@ module.exports = {
   // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
   devtool: "cheap-eval-source-map",
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json", ".css", ".scss", ".sass"],
+    extensions: [".ts", ".tsx", ".js", ".json"],
     plugins: [new TsConfigPathsPlugin(/* { tsconfig, compiler } */)]
   },
   module: {
     rules: [
+      {
+        test: /style\.s?css$/,
+        exclude: /(node_modules|bower_components)/,
+        use: extractConfig.use
+      },
+      {
+        test: /editor\.s?css$/,
+        exclude: /(node_modules|bower_components)/,
+        use: extractConfig.use
+      },
       // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
       { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
 
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
       // {
       // 	test: /\.(js|jsx|mjs)$/,
       // 	exclude: /(node_modules|bower_components)/,
@@ -110,16 +120,6 @@ module.exports = {
       // 		}
       // 	}
       // },
-      {
-        test: /style\.s?css$/,
-        exclude: /(node_modules|bower_components)/,
-        use: extractConfig.use
-      },
-      {
-        test: /editor\.s?css$/,
-        exclude: /(node_modules|bower_components)/,
-        use: extractConfig.use
-      }
     ]
   },
   // Add plugins.

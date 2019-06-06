@@ -21,6 +21,7 @@
  */
 
 const paths = require("./paths");
+const path = require("path");
 const webpack = require("webpack");
 const externals = require("./externals");
 const autoprefixer = require("autoprefixer");
@@ -47,8 +48,8 @@ const editBlocksCSSPlugin = new MiniCssExtractPlugin({
 const extractConfig = {
   use: [
     // "postcss" loader applies autoprefixer to our CSS
-    { loader: MiniCssExtractPlugin.loader },
-    { loader: "css-loader" },
+    MiniCssExtractPlugin.loader,
+    "css-loader",
     {
       loader: "postcss-loader",
       options: {
@@ -94,7 +95,7 @@ module.exports = {
   // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
   devtool: shouldUseSourceMap ? "source-map" : false,
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"],
+    extensions: [".ts", ".tsx", ".js", ".json", ".scss", ".css"],
     plugins: [new TsConfigPathsPlugin(/* { tsconfig, compiler } */)]
   },
   module: {
