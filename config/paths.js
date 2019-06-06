@@ -20,5 +20,5 @@ module.exports = {
   pluginBlocksStyle: resolvePlugin("src/blocks.scss"),
   pluginEditorStyle: resolvePlugin("src/editor.scss"),
   yarnLockFile: resolvePlugin("yarn.lock"),
-  pluginDist: resolvePlugin(".") // We are in ./dist folder already so the path '.' resolves to ./dist/.
+  pluginDist: resolvePlugin("./dist") // We are in ./dist folder already so the path '.' resolves to ./dist/.
 };

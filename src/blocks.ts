@@ -9,6 +9,9 @@
  * Webpack is compiling as the input file.
  */
 import "./block/block";
+import "./block/style.scss";
+import "./block/editor.scss";
+
 import "./blocks/Crensoft/Crensoft.block";
 import "./blocks/ContactPage/ContactPage.block";
 import "./blocks/Legal/PrivacyPage.block";

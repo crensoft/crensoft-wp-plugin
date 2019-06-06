@@ -131,6 +131,7 @@
   "sideEffects": [
     "*.block.tsx",
     "block.tsx",
-    "*.scss"
+    "*.scss",
+    "*.css"
   ]
 }

@@ -40,9 +40,9 @@ const blocksCSSPlugin = new MiniCssExtractPlugin({
 });
 
 // Extract editor.css for editor styles.
-const editBlocksCSSPlugin = new MiniCssExtractPlugin({
-  filename: "./dist/blocks.editor.build.css"
-});
+// const editBlocksCSSPlugin = new MiniCssExtractPlugin({
+//   filename: "./dist/blocks.editor.build.css"
+// });
 
 // Configuration for the ExtractTextPlugin — DRY rule.
 const extractConfig = {
@@ -82,8 +82,8 @@ const extractConfig = {
 // Export configuration.
 module.exports = {
   entry: {
-    "./dist/blocks.build": paths.pluginBlocksJs, // 'name' : 'path/file.ext'.
-    "./dist/hydrate": paths.pluginHydrate
+    "blocks.build": paths.pluginBlocksJs, // 'name' : 'path/file.ext'.
+    hydrate: paths.pluginHydrate
   },
   output: {
     // Add /* filename */ comments to generated require()s in the output.
@@ -129,8 +129,28 @@ module.exports = {
     ]
   },
   // Add plugins.
-  plugins: [blocksCSSPlugin, editBlocksCSSPlugin /*new BundleAnalyzerPlugin()*/],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "blocks.[name].build.css"
+    }) /*new BundleAnalyzerPlugin()*/
+  ],
   optimization: {
+    splitChunks: {
+      cacheGroups: {
+        style: {
+          name: "style",
+          test: /style\.s?css$/,
+          chunks: "all",
+          enforce: true
+        },
+        editor: {
+          name: "editor",
+          test: /editor\.s?css$/,
+          chunks: "all",
+          enforce: true
+        }
+      }
+    },
     minimizer: [
       new TerserPlugin({
         cache: true,
