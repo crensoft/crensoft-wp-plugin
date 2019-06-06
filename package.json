@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@babel/core": "7.4.4",
-    "@crensoft/mui-core": "file:../../../mui/packages/mui-core",
-    "@crensoft/mui-marketing": "file:../../../mui/packages/mui-marketing",
+    "@crensoft/mui-core": "^0.1.0",
+    "@crensoft/mui-marketing": "^0.1.0",
     "@crensoft/mui-utils": "0.1.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-brands-svg-icons": "^5.8.1",
