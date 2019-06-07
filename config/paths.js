@@ -17,7 +17,7 @@ module.exports = {
   pluginSrc: resolvePlugin("src"), // Plugin src folder path.
   pluginBlocksJs: resolvePlugin("src/blocks.ts"),
   pluginHydrate: resolvePlugin("src/hydrate.tsx"),
-  pluginBlocksStyle: resolvePlugin("src/blocks.scss"),
+  pluginBlocksStyle: resolvePlugin("src/blocks.styles.ts"),
   pluginEditorStyle: resolvePlugin("src/editor.scss"),
   yarnLockFile: resolvePlugin("yarn.lock"),
   pluginDist: resolvePlugin("./dist") // We are in ./dist folder already so the path '.' resolves to ./dist/.

@@ -8,7 +8,6 @@
 //  Import CSS.
 import ReactDOM from "react-dom/server";
 import { ServerStyleSheets } from "@material-ui/styles";
-import Theme from "@crensoft/mui-core/lib/components/Theme/Theme";
 import TermsPage from "../../components/Crensoft/TermsPage";
 
 declare var wp: any;
