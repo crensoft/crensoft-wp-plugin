@@ -32,7 +32,10 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+      {
+        test: /.tsx?$/,
+        use: [{ loader: "ts-loader", options: { transpileOnly: true } }]
+      },
       {
         test: /\.s?css$/,
         exclude: /(node_modules|bower_components)/,

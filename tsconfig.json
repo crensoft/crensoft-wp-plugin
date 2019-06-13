@@ -11,7 +11,11 @@
     "moduleResolution": "node",
     "isolatedModules": true,
     "strict": true,
-    "rootDirs": ["src"]
+    "rootDirs": ["src"],
+    // "diagnostics": true,
+    // "extendedDiagnostics": true,
+    "skipLibCheck": true,
+    "types": []
   },
   "include": ["./src/**/*"],
   "filesGlob": ["./src/**/*.d.ts"],

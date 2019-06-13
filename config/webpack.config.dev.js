@@ -18,7 +18,14 @@ const devConfig = {
         loader: "source-map-loader"
       }
     ]
-  }
+  },
+  plugins: [
+    new ForkTsCheckerWebpackPlugin({
+      async: true,
+      useTypescriptIncrementalApi: true,
+      memoryLimit: 4096
+    })
+  ]
 };
 
 // Export configuration.

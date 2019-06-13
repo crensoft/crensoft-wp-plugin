@@ -3,7 +3,6 @@ import AppBar from "@crensoft/mui-core/lib/components/AppBar/AppBar";
 import AppBarLogo from "@crensoft/mui-core/lib/components/AppBar/components/AppBarLogo";
 import AppMenu from "@crensoft/mui-core/lib/components/AppBar/components/AppMenu";
 import Logo from "./svgs/Logo";
-import { filter } from "ramda";
 import { Link } from "@crensoft/mui-core";
 
 const menus = [
@@ -30,7 +29,7 @@ const menus = [
 ];
 
 export default function CrensoftTopbar(props: any) {
-  const filterMenus = filter((item: any) => item.key !== props.activeKey, menus[0]);
+  const filterMenus = menus[0].filter((item: any) => item.key !== props.activeKey);
   return (
     <AppBar large scrollTarget="site-wrapper">
       <Link style={{ display: "flex", flexGrow: 1 }} to="/">
